@@ -1,0 +1,21 @@
+a. Que se passe-t-il avec ces instructions :
+point <char> p (60, 65) ;
+p.affiche () ;
+
+reponse:
+Coordonnees : 60 65
+**************************************************************************
+b. Comment faut-il modifier la définition de notre patron pour que les instructions
+précédentes affichent bien :
+Coordonnees : 60 65
+
+reponse:
+template <class T> class point
+{ int x, y ; // coordonnees
+public :
+point (T abs, T ord) { x = abs ; y = ord ; }
+void affiche () ;
+} ;
+template <class T> void point<T>::affiche ()
+{ cout << "Coordonnees : " << x << " " << y << "\n" ;
+}
